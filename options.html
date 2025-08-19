@@ -1,0 +1,45 @@
+<!DOCTYPE >
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>DAT Sync 2.0 — Settings</title>
+  <link href="main.css" rel="stylesheet" />
+  <style>
+    body {
+      padding: 16px;
+      max-width: 720px
+    }
+  </style>
+</head>
+
+<body class="page">
+  <h2>DAT Sync 2.0 — Settings</h2>
+  <div class="row"><label>GitHub Token (PAT)</label><input id="token" type="password" placeholder="ghp_..."
+      autocomplete="off" />
+    <div class="subtitle">Token with <b>gist</b> scope; stored locally.</div>
+  </div>
+  <div class="row"><label>Gist ID</label><input id="gistId" type="text" placeholder="e.g. a1b2c3d4e5f6..." /></div>
+  <div class="row"><label>Session Filename</label><input id="filename" type="text" value="session.json" /></div>
+  <div class="row"><label>Auth CSV Filename</label><input id="authFile" type="text" value="users.csv" /></div>
+  <div class="row"><label>Secret (for DAT Access decryption)</label><input id="secret" type="password"
+      placeholder="passphrase" /></div>
+  <div class="row"><label>Encrypt to Gist</label><label class="switch"><input id="encrypt" type="checkbox"><span
+        class="slider"></span></label>
+    <div class="hint">Store sessions encrypted. Requires the admin security phrase.</div>
+  </div>
+  <div class="row"><label>Auto-Push</label><label class="switch"><input type="checkbox" id="autoPush"><span
+        class="slider"></span></label><span class="subtitle">When on, cookie changes trigger a debounced push.</span>
+  </div>
+  <div class="row"><button id="save" class="btn">Save</button> <span id="status" class="status"></span></div>
+  <hr />
+  <h3>Generate Setup Token for DAT Access</h3>
+  <div class="subtitle">Encodes current settings: <code>{ gistId, token, secret, filename, authFile }</code> as
+    Base64URL.</div>
+  <div class="row"><button id="gen" class="btn">Generate Token</button> <button id="copy"
+      class="btn secondary copy">Copy</button></div>
+  <div class="row"><label>Setup Token</label><textarea id="tokenOut" readonly></textarea></div>
+  <script type="module" src="options.js"></script>
+</body>
+
+</html>
