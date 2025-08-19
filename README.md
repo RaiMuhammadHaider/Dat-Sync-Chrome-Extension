@@ -17,8 +17,7 @@ Includes support for **auto-push**, **AES-256-GCM encryption**, and **easy token
 ##  Screenshots
 
 ### Popup UI
-![Popup Screenshot](![WhatsApp Image 2025-08-19 at 02 31 49_6cb9a0ce](https://github.com/user-attachments/assets/3b68bde5-9fbb-470c-84b4-b9a416631616)
-)
+![WhatsApp Image 2025-08-19 at 02 31 49_6cb9a0ce](https://github.com/user-attachments/assets/7625f0aa-07d5-4c5a-b7ae-18608bf9960f)
 
 
-##  Project Structure
+
